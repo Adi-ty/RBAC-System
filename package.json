@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"dev": "tsx watch src/main.ts"
+		"dev": "tsx watch src/main.ts",
+		"migrate": "drizzle-kit generate:pg"
 	},
 	"devDependencies": {
 		"@types/jsonwebtoken": "^9.0.2",
