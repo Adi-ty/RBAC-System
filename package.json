@@ -1,12 +1,17 @@
 {
 	"scripts": {
 		"dev": "tsx watch src/main.ts",
+		"build": "tsc",
 		"migrate": "drizzle-kit generate:pg"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.6.6",
+		"@commitlint/config-conventional": "^17.6.6",
 		"@types/jsonwebtoken": "^9.0.2",
 		"@types/pg": "^8.10.2",
 		"drizzle-kit": "^0.19.3",
+		"husky": "^8.0.3",
+		"prettier": "^3.0.0",
 		"tsx": "^3.12.7",
 		"typescript": "^5.1.6",
 		"zod-to-json-schema": "^3.21.3"
