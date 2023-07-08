@@ -1,13 +1,21 @@
-import { FastifyInstance } from "fastify";
-import { createUserHandler } from "./users.controllers";
-import { createUserJsonSchema } from "./users.schemas";
+import { FastifyInstance } from 'fastify';
+import { createUserHandler, loginHandler } from './users.controllers';
+import { createUserJsonSchema, loginJsonSchema } from './users.schemas';
 
 export async function usersRoutes(app: FastifyInstance) {
   app.post(
-    "/",
+    '/',
     {
       schema: createUserJsonSchema,
     },
-    createUserHandler
+    createUserHandler,
+  );
+
+  app.post(
+    '/login',
+    {
+      schema: loginJsonSchema,
+    },
+    loginHandler,
   );
 }

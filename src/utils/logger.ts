@@ -1,9 +1,9 @@
-import pino from "pino";
+import pino from 'pino';
 
 export const logger = pino({
-  redact: ["DATABASE_CONNECTION"],
-  level: "debug",
+  redact: ['DATABASE_CONNECTION', 'SECRET_KEY'],
+  level: 'debug',
   transport: {
-    target: "pino-pretty",
+    target: 'pino-pretty',
   },
 });

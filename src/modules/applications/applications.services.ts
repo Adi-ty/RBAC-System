@@ -1,10 +1,9 @@
-import { InferModel } from "drizzle-orm";
-import { db } from "../../db";
-import { applications } from "../../db/schema";
-import { P } from "pino";
+import { InferModel } from 'drizzle-orm';
+import { db } from '../../db';
+import { applications } from '../../db/schema';
 
 export async function createApplication(
-  data: InferModel<typeof applications, "insert">
+  data: InferModel<typeof applications, 'insert'>,
 ) {
   const result = await db.insert(applications).values(data).returning();
 
